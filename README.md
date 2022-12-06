@@ -1,17 +1,25 @@
-# yolov7
+# Docker Container for ROS and YoloV7-based TensorRT instance segmentation
 
-Implementation of "YOLOv7: Trainable bag-of-freebies sets new state-of-the-art for real-time object detectors"
+To be used as a base for further containers, which depend on the combination
+of YoloV7 TensorRT-models and ROS.
 
-This implimentation is based on [yolov5](https://github.com/ultralytics/yolov5).
+## How to use?
 
-## Object detection
+Run the container as follows:
 
-[code](./det)
+```bash
+docker pull `ghcr.io/josephbirkner/ros-yolov7-trt`
+docker run --rm -it --gpus all ghcr.io/josephbirkner/ros-yolov7-trt bash
+```
 
-## Instance segmentation
+To build Tensor-RT models, invoke the `./mktrt.bash` command.
+The script will create Tensor-RT versions of the Yolov7-Segmentation model
+for 640x640 and 1280x1280 resolutions. After running the script, you will
+find the converted TensorRT models under the `/trt/yolov7_<resolution>.trt` path.
 
-[code](./seg)
+## Thanks
 
-## Image classification
+- Original YoloV7 Repo: https://github.com/WongKinYiu/yolov7
+- First helper repo (the one this was forked from): https://github.com/leandro-svg/Yolov7_Segmentation_Tensorrt
+- Second helper repo, linked as submodule: https://github.com/Linaom1214/TensorRT-For-YOLO-Series
 
-[code](./det)
