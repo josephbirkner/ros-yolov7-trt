@@ -1,3 +1,0 @@
-[submodule "yolov7-trt-helper"]
-	path = yolov7-trt-helper
-	url = https://github.com/Linaom1214/TensorRT-For-YOLO-Series.git
