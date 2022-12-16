@@ -8,7 +8,7 @@ set -euo pipefail
 
 . /venv/bin/activate
 
-resolutions=( 640 1280 )
+resolutions=( 640 1280 1920)
 
 for resolution in "${resolutions[@]}"; do
     model_name="yolov7_$resolution"
