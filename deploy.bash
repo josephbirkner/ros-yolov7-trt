@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-image_name=ghcr.io/josephbirkner/ros-yolov7-trt
+image_name=ghcr.io/providentia-project/ros-yolov7-trt
 
 docker build -t $image_name .
 

@@ -8,8 +8,8 @@ of YoloV7 TensorRT-models and ROS.
 Run the container as follows:
 
 ```bash
-docker pull `ghcr.io/josephbirkner/ros-yolov7-trt`
-docker run --rm -it --gpus all ghcr.io/josephbirkner/ros-yolov7-trt bash
+docker pull `ghcr.io/providentia-project/ros-yolov7-trt`
+docker run --rm -it --gpus all ghcr.io/providentia-project/ros-yolov7-trt bash
 ```
 
 To build Tensor-RT models, invoke the `./mktrt.bash` command.
@@ -22,4 +22,3 @@ find the converted TensorRT models under the `/trt/yolov7_<resolution>.trt` path
 - Original YoloV7 Repo: https://github.com/WongKinYiu/yolov7
 - First helper repo (the one this was forked from): https://github.com/leandro-svg/Yolov7_Segmentation_Tensorrt
 - Second helper repo, linked as submodule: https://github.com/Linaom1214/TensorRT-For-YOLO-Series
-
