@@ -3,12 +3,12 @@
 set -euo pipefail
 
 #
-# Create Yolo v7 mask models for 640 and 1280 resolutions.
+# Create Yolo v7 mask models for 640, 1280 and 1920 resolutions.
 #
 
 . /venv/bin/activate
 
-resolutions=( 640 1280 )
+resolutions=( 640 1280 1920 )
 
 for resolution in "${resolutions[@]}"; do
     model_name="yolov7_$resolution"
